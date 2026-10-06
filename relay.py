@@ -91,7 +91,7 @@ def phone_listener():
     global phone_conn
     srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    srv.bind('0.0.0.0', PORT_PHONE)
+    srv.bind(('0.0.0.0', PORT_PHONE))
     srv.listen(5)
     print(f'phone listener on 0.0.0.0:{PORT_PHONE}', flush=True)
     while True:
